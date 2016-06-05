@@ -19,6 +19,15 @@
 		<%= f.text_field :name %>
 	</p>
 
+	<%= f.fields_for :recipe_ingredients do |r| %>
+		<p>
+		Ingredients<br>
+		<%= r.text_field :amount, :size => 5 %> &nbsp; 
+		<%= r.collection_select :unit_id, Unit.order('name ASC'), :id, :name %> &nbsp;
+		<%= text_field :ingredient, :name%>
+		</p>
+	<% end %>
+
 	<p>
 		<%= f.label :directions %><br>
 		<%= f.text_area :directions %>

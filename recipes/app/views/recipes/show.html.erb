@@ -4,7 +4,13 @@
 </p>
 
 <p>
-	<strong>Directions:</strong>
+	<strong>Ingredients:</strong><br>
+	<%= @recipe.recipe_ingredients[0].amount %>
+	<%= @recipe.recipe_ingredients[0].unit.name %>
+</p>
+
+<p>
+	<strong>Directions:</strong><br>
 	<%= @recipe.directions %>
 </p>
 
